@@ -1,0 +1,4 @@
+collection =
+ [{:item=>"DOG FOOD"}, {:item=>"WINE"}, {:item=>"STRYCHNINE"}]
+
+ name = "WINE"
