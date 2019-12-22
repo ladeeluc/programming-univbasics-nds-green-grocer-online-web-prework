@@ -1,4 +1,29 @@
-collection =
- [{:item=>"DOG FOOD"}, {:item=>"WINE"}, {:item=>"STRYCHNINE"}]
 
- name = "WINE"
+
+collection =>
+
+ [{:item=>"DOG FOOD"}, 
+ {:item=>"WINE"}, 
+ {:item=>"STRYCHNINE"}]
+
+ name = 
+ "WINE"
+
+cart = # array of hashes
+
+  [{:item=>"TEMPEH",
+  :price=>3.0,
+  :clearance=>true},
+{:item=>"PEANUTBUTTER",
+  :price=>3.0,
+  :clearance=>true},
+{:item=>"ALMONDS",
+  :price=>9.0,
+  :clearance=>false}]
+
+  results.each do |h| # get each element (key-value pairs) of results array  
+1* h['c'] = 'newvalue' #add a new pair to them
+1> end
+
+=> [{"c"=>"newvalue", "b"=>2, "a"=>1}, {"c"=>"newvalue", "b"=>4, "a"=>3}]
+# same as results.each {|h| h['c'] ="newvalue"}

@@ -1,21 +1,46 @@
 require 'pry'
-
+require 'pp'
 
 def find_item_by_name_in_collection(name, collection)
-i = 0
 
-while i < collection.each do 
-        return collection[i] if name === collection[i][:item] #unless
-        #collection[i] && name === collection[i][:item] = false
-        i += 1
-  end
+  i = 0 #sets array witch is collection parameter to zero
+
+
+ while i < collection.length # goes throught each key in array of hashes with keys and symbols
+        return collection[i] if name === collection[i][:item]# returns first symbols compares to name which is a string
+        i += 1 # goes through entire array of hashes until no more 
+       end
+   nil
 end
-#binding.pry
 # Implement me first!
 #
 # Consult README for inputs and outputs
 
 def consolidate_cart(cart)
+  new_array = []
+  i = 0
+
+  while < i cart.count do 
+    item_name = cart[i][:item]
+    item_stats = cart[1][2]
+
+    if 
+  end
+
+
+
+
+
+
+  # while cart.each do |new_key|
+  #   1 * find_item_by_name_in_collection[:count] = new_array
+  #   1 >
+  # end
+  # new_array
+    
+
+
+  #binding.pry
   # Consult README for inputs and outputs
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
@@ -46,61 +71,4 @@ def checkout(cart, coupons)
   # some irritated customers
 end
 
-
-# require 'pry'
-
-# def consolidate_cart(cart)
-#         final_hash = {}
-#         cart.each do |element_hash|
-#         element_name = element_hash.keys[0]
-
-#         if  final_hash.has_key?{element_name}
-#         final_hash{element_name}[:count] +=1
-#                 else
-#                     final_hash[element_name] = {
-#                     count: 1,
-#                     price: element_hash[element_name][:price],
-#                     clearance:element_hash[element_name][:clearence]
-#               }
-#           end
-#       end
-#     final_hash
-# end
-
-# def apply_coupons(cart, coupons)
-#         coupons.each do |coupon|
-#             item = coupon[:item]
-#                 if cart[item] && coupon[:item][:count] >= coupon[:num] && !cart.has_key?["#{item}w/coupon"]
-#                         cart["#{item}w/coupon"] = [{price:coupon[:cost][:num]}],
-#                         {clearence:cart[item][:clearence][:count]},
-#                               if cart.has_key?(item)
-#                                 if cart[item][:count] >= coupon[:num]
-#                                   if !cart[coupon_item]
-#                                       cart[coupon_item] = count:coupon[:num][:coupon][:cost],coupon[:num]
-#                                       cart[:item][:count] -= coupon[:num]
-#                               elsif cart[coupon_item] && cart[item][:count] >= coupon[:num]
-#                                     cart[coupon_item][:count]+= coupon[:num]
-#                                end
-#                       cart[item][:count] -= coupon[:num]
-#                   end
-#               end
-#           end
-#       cart
-# end
-
-# def apply_clearance(cart)
-#         cart.each do [product_name,stats]
-#         stats[:price] -= stats[:price] * 0.2 if stats[:clearance] == true
-#     end
-#   cart
-# end
-
-# def checkout(cart,coupons)
-#         hash_cart = consolidate_cart(array)
-#         applied_coupons = apply_coupons(hash_cart, coupons)
-#         applied_discount = appl_clearence(applied_coupons)
-#         #total = appplied_discount.reduce(0)|acc|(key,value)|acc| +=
-#         #total > 100 ? total = 0.9 : total
-# end
-# end
 

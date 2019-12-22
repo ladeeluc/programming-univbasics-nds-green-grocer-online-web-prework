@@ -113,7 +113,7 @@ create.
 ### Write the `consolidate_cart` Method
 
 * Arguments:
-  * `Array`: a collection of item Hashes
+  * `Array`: a collection of item Hashes = cart
 * Returns:
   * a ***new*** `Array` where every ***unique*** item in the original is present
     * Every item in this new `Array` should have a `:count` attribute
